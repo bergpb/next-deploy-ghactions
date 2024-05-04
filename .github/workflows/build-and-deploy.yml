@@ -10,8 +10,10 @@ on:
   workflow_dispatch:
     inputs:
       environment:
+        type: choice
         description: 'Environment to deploy the application'
-        type: environment
+        options:
+        - production
         required: true
 
 permissions:
