@@ -72,7 +72,7 @@ jobs:
       - name: Unzip artifact for deployment
         run: unzip release.zip
 
-      - run: echo "value of CHECK_ENV var: ${{ vars.CHECK_ENV }}"
+      - run: echo "My CHECK_ENV value is ${{ env.CHECK_ENV }}"
 
       # - name: Configure AWS Credentials
       #   uses: aws-actions/configure-aws-credentials@v1
@@ -99,7 +99,7 @@ jobs:
       - name: Unzip artifact for deployment
         run: unzip release.zip
 
-      - run: echo "value of CHECK_ENV var: ${{ vars.CHECK_ENV }}"
+      - run: echo "My CHECK_ENV value is ${{ env.CHECK_ENV }}"
 
       # - name: Configure AWS Credentials
       #   uses: aws-actions/configure-aws-credentials@v1
