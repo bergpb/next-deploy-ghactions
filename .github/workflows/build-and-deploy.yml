@@ -68,6 +68,8 @@ jobs:
 
       - run: echo "My CHECK_ENV value is ${{ vars.CHECK_ENV }}"
 
+      - run: echo "My BUCKET_NAME value is ${{ vars.BUCKET_NAME }}"
+
       # - name: Configure AWS Credentials
       #   uses: aws-actions/configure-aws-credentials@v1
       #   with:
@@ -93,6 +95,8 @@ jobs:
         run: unzip release.zip
 
       - run: echo "My CHECK_ENV value is ${{ vars.CHECK_ENV }}"
+
+      - run: echo "My BUCKET_NAME value is ${{ vars.BUCKET_NAME }}"
 
       # - name: Configure AWS Credentials
       #   uses: aws-actions/configure-aws-credentials@v1
