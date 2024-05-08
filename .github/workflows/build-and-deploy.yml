@@ -11,10 +11,6 @@ on:
         type: environment
         required: true
 
-permissions:
-  id-token: write
-  contents: read
-
 env:
   NODE_VERSION: 20
   ARTIFACT_NAME: 'nextjs-deploy'
