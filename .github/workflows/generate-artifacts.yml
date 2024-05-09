@@ -51,14 +51,14 @@ jobs:
           zip release.zip ./* -r
 
       - name: Upload dev artifact for deployment job
-        if: github.event_name == 'pull_request'
+        if: github.event_name == 'pull_request' # only for dev
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.ARTIFACT_NAME }}-dev
           path: ./out/release.zip
 
       - name: Upload prod artifact for deployment job
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main' # only for prod
         uses: actions/upload-artifact@v4
         with:
           name: ${{ env.ARTIFACT_NAME }}-prod
